@@ -1,0 +1,56 @@
+server migration :
+
+on-prem servers --- cloud 
+
+old : --- > on-prem servers -- export ovf/vmdk --- data.storage --- > aws s3(manual) ---- > aws cli --->convert-- AMI --- > instance
+
+SMS --- > on-prem -- cloud 
+
+on-prem -- > sms connector  --- > few scripts run--- > snapshots ---> s3 --- > sms --- > vm import /export--- > ami--->instance /CF template
+
+Cloudendure  --- > on-prem CE agent ---> firewall- 443 , 1500--- >few scripts run --- > disks replica started ---> cloud endure consule --- > once "CDR"--- > Launch target machine--- > Blueprint ( vpc,subnet,sg) ---> instance 
+
+
+Database migration:
+old :
+
+aws schema converter --->create a project --- > seclect source db engine ---> target db engine --> create project
+
+source db --- connect
+
+aws --- target db --connect -- endpoint 
+
+schemas all move 
+
+DMS tool :
+
+on-prem connect to DMS 
+
+aws database connect to DMS 
+
+REPLICATION WILL START USING DMS 
+
+
+Storage :
+
+Snow family - snow ball , snow edge , snow mobile
+
+storage gateway 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
